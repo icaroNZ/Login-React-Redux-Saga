@@ -1,0 +1,13 @@
+export const GET_WAX_USER = 'GET_WAX_USER';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGGED_OUT = 'LOGGED_OUT';
+export const WAX_USER_RESULT = 'WAX_USER_RESULT';
+export const WAX_USER_ERROR = 'WAX_USER_ERROR';
+
+export default {
+  GET_WAX_USER,
+  LOGGED_OUT,
+  WAX_USER_RESULT,
+  WAX_USER_ERROR,
+  LOGIN_SUCCESS,
+};
