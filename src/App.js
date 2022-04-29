@@ -1,14 +1,19 @@
 import './App.css';
 import { useDispatch } from 'react-redux';
 import { getWaxUserAction, logoutUserAction } from './actions/waxActions';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    console.log('Add Listeners');
+    window.addEventListener('message', (event) => {
+      console.log('Event', event);
+      //window.ReactNativeWebView.postMessage(JSON.stringify(event));
+      //document.ReactNativeWebView.postMessage(JSON.stringify(event));
+    });
+  }, []);
   // const getWax = async () => {
-  //   window.addEventListener('message', (event) => {
-  //     console.log('Event', event);
-  //     window.ReactNativeWebView.postMessage(JSON.stringify(event));
-  //     document.ReactNativeWebView.postMessage(JSON.stringify(event));
-  //   });
+
   //   console.log('Getting Wax');
   //   const wax = new waxjs.WaxJS({
   //     rpcEndpoint: 'https://wax.greymass.com',
